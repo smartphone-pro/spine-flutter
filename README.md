@@ -35,7 +35,9 @@ To add `spine_flutter` to your Flutter project, add the following dependency to 
 ```yaml
 dependencies:
   ...
-  spine_flutter: ^4.2.11
+  spine_flutter:
+    git:
+      url: https://github.com/smartphone-pro/spine-flutter.git
 ```
 
 In your `main()`, add these two lines in the beginning to initialize the Spine Flutter runtime:
