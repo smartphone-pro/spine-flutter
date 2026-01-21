@@ -19,7 +19,6 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-import 'dart:typed_data';
 import 'dart:ui' as ui;
 
 import 'package:flutter/foundation.dart';
@@ -40,7 +39,8 @@ class RawImageProvider extends ImageProvider<_RawImageKey> {
   });
 
   @override
-  ImageStreamCompleter loadImage(_RawImageKey key, ImageDecoderCallback decode) {
+  ImageStreamCompleter loadImage(
+      _RawImageKey key, ImageDecoderCallback decode) {
     return MultiFrameImageStreamCompleter(
       codec: _loadAsync(key),
       scale: scale ?? 1.0,
